@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors — Pistachio & Maroon Luxury (original light editorial theme) */
+  --color-ivory: #FBF8F2;
+  --color-pistachio: #C6D4BE;
+  --color-pistachio-deep: #A9BCA0;
+  --color-champagne: #E8DCCB;
+  --color-maroon: #6A2E39;
+  --color-maroon-deep: #4E1F27;
+  --color-brown: #433A36;
+  --color-gold: #C7A463;
+
+  /* Fonts */
+  --font-heading: "Cormorant Garamond", "Bodoni Moda", serif;
+  --font-display: "DM Serif Display", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-body: "Inter", "Manrope", sans-serif;
+  --font-arabic: "Amiri", serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-brown);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-maroon);
+    color: var(--color-ivory);
+  }
+}
+
+@layer utilities {
+  .font-heading { font-family: var(--font-heading); }
+  .font-display { font-family: var(--font-display); }
+  .font-script { font-family: var(--font-script); }
+  .font-arabic { font-family: var(--font-arabic); }
+
+  .glass-card {
+    background: color-mix(in srgb, var(--color-ivory) 92%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-gold) 35%, transparent);
+    border-radius: 24px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-maroon);
+  outline-offset: 3px;
+}

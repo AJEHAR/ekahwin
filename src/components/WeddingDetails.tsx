@@ -3,6 +3,7 @@ import { weddingConfig } from "../data/weddingConfig"
 import { DividerMark } from "./Botanical"
 import FloralCorner from "./FloralCorner"
 import SectionPattern from "./SectionPattern"
+import AddToCalendar from "./AddToCalendar"
 
 export default function WeddingDetails() {
   return (
@@ -38,6 +39,8 @@ export default function WeddingDetails() {
             </div>
           ))}
         </div>
+
+        <AddToCalendar />
       </motion.div>
     </section>
   )

@@ -64,8 +64,8 @@ export const weddingConfig = {
   // GANTI scriptUrl di bawah dengan URL "Web app" awak selepas deploy
   // Apps Script (rujuk panduan RSVP_SETUP.md dalam projek ni).
   rsvp: {
-    scriptUrl: "GANTI_DENGAN_URL_APPS_SCRIPT_ANDA",
-    attendanceOptions: [1, 2, 3, 4],
+    scriptUrl: "https://script.google.com/macros/s/AKfycbxdxute4idnkfOLuOU-7HWNi1qKJCoNVtg-TETuhthfK-to0sh2Js25447Jppcy6w-dpw/exec",
+    attendanceOptions: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
 
   contacts: [

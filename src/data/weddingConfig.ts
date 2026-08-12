@@ -51,6 +51,8 @@ export const weddingConfig = {
   },
 
   gift: {
+    // Set kepada false untuk sorok seksyen "Wedding Gift" (QR DuitNow) sepenuhnya.
+    enabled: true,
     // Letak gambar QR DuitNow di /public/images/duitnow-qr.png
     qrImage: "/images/duitnow-qr.png",
     note: "QR DuitNow untuk hadiah pernikahan",

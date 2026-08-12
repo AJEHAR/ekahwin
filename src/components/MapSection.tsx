@@ -40,7 +40,7 @@ export default function MapSection() {
             href={weddingConfig.event.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 rounded-full bg-[var(--color-maroon)] text-[var(--color-ivory)] text-sm tracking-wide font-body shadow-md"
+            className="active:scale-95 transition-transform px-6 py-3 rounded-full bg-[var(--color-maroon)] text-[var(--color-ivory)] text-sm tracking-wide font-body shadow-md min-h-[44px] flex items-center"
           >
             Google Maps
           </a>
@@ -48,7 +48,7 @@ export default function MapSection() {
             href={weddingConfig.event.wazeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 rounded-full border border-[var(--color-maroon)] text-[var(--color-maroon)] text-sm tracking-wide font-body"
+            className="active:scale-95 transition-transform px-6 py-3 rounded-full border border-[var(--color-maroon)] text-[var(--color-maroon)] text-sm tracking-wide font-body min-h-[44px] flex items-center"
           >
             Waze
           </a>

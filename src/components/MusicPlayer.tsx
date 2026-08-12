@@ -78,6 +78,7 @@ export default function MusicPlayer() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
         onClick={toggle}
+        whileTap={{ scale: 0.9 }}
         aria-label={playing ? "Jeda muzik" : "Mainkan muzik"}
         title={weddingConfig.music.title || undefined}
         className="fixed top-4 right-4 z-40 w-12 h-12 rounded-full glass-card flex items-center justify-center"

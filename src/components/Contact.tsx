@@ -37,6 +37,7 @@ export default function Contact() {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.96 }}
               className="glass-card px-5 py-8 flex flex-col items-center gap-3"
             >
               <div className="w-11 h-11 rounded-full bg-[var(--color-maroon)] text-[var(--color-ivory)] flex items-center justify-center">

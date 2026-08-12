@@ -4,7 +4,6 @@ import BottomNav from "./components/BottomNav"
 import MusicPlayer from "./components/MusicPlayer"
 import HeroCouple from "./components/HeroCouple"
 import Salam from "./components/Salam"
-import Parents from "./components/Parents"
 import QuranVerse from "./components/QuranVerse"
 import Countdown from "./components/Countdown"
 import WeddingDetails from "./components/WeddingDetails"
@@ -28,7 +27,6 @@ export default function App() {
           <main className="pb-24">
             <HeroCouple />
             <Salam />
-            <Parents />
             <QuranVerse />
             <Countdown />
             <WeddingDetails />

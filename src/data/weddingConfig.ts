@@ -9,13 +9,16 @@ export const weddingConfig = {
     brideShort: "Syifa",
     groomFull: "Azharuddin Haniff",
     brideFull: "Nurus Syifa",
+    // Nama penuh + bin/binti — dipaparkan di seksyen Salam
+    groomLegalName: "Azharuddin Haniff Bin Mohd Lowhim",
+    brideLegalName: "Nurus Syifa Binti Ahmad Masri",
     monogram: "A ♡ S",
   },
 
   parents: {
     groom: {
-      father: "Mohd Lowhim Bin Sapingi",
-      mother: "Salmiah Binti Md Arof",
+      father: "Haji Mohd Lowhim Bin Sapingi",
+      mother: "Hajah Salmiah Binti Md. Arof",
     },
     bride: {
       father: "Nama Bapa Pengantin Perempuan",
@@ -64,8 +67,8 @@ export const weddingConfig = {
   // GANTI scriptUrl di bawah dengan URL "Web app" awak selepas deploy
   // Apps Script (rujuk panduan RSVP_SETUP.md dalam projek ni).
   rsvp: {
-    scriptUrl: "GANTI_DENGAN_URL_APPS_SCRIPT_ANDA",
-    attendanceOptions: [1, 2, 3, 4],
+    scriptUrl: "https://script.google.com/macros/s/AKfycbxdxute4idnkfOLuOU-7HWNi1qKJCoNVtg-TETuhthfK-to0sh2Js25447Jppcy6w-dpw/exec",
+    attendanceOptions: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
 
   contacts: [

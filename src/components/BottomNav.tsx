@@ -99,7 +99,7 @@ export default function BottomNav() {
             <a
               key={t.href}
               href={t.href}
-              className="active:scale-90 transition-transform relative flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-2xl font-body min-w-[56px] min-h-[52px]"
+              className="relative flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-2xl font-body min-w-[56px] min-h-[52px]"
             >
               {isActive && (
                 <motion.div

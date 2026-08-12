@@ -5,13 +5,11 @@ import { DividerMark } from "./Botanical"
 import FloralCorner from "./FloralCorner"
 import SectionPattern from "./SectionPattern"
 import TextVeil from "./TextVeil"
-import { useGuestName } from "../utils/guestName"
 
 type Status = "idle" | "submitting" | "success" | "error"
 
 export default function RSVP({ onSubmitted }: { onSubmitted?: () => void }) {
-  const guestName = useGuestName()
-  const [nama, setNama] = useState(guestName ?? "")
+  const [nama, setNama] = useState("")
   const [kehadiran, setKehadiran] = useState(1)
   const [hadir, setHadir] = useState<"Hadir" | "Tidak Hadir">("Hadir")
   const [ucapan, setUcapan] = useState("")
@@ -103,7 +101,7 @@ export default function RSVP({ onSubmitted }: { onSubmitted?: () => void }) {
                     key={opt}
                     type="button"
                     onClick={() => setHadir(opt)}
-                    className={`active:scale-95 transition flex-1 py-2.5 rounded-xl text-sm font-body border ${
+                    className={`flex-1 py-2.5 rounded-xl text-sm font-body border transition-colors ${
                       hadir === opt
                         ? "bg-[var(--color-maroon)] text-[var(--color-ivory)] border-[var(--color-maroon)]"
                         : "border-[var(--color-gold)]/30 text-[var(--color-brown)]"
@@ -120,17 +118,22 @@ export default function RSVP({ onSubmitted }: { onSubmitted?: () => void }) {
                 <label className="block text-xs tracking-[0.15em] uppercase text-[var(--color-gold)] mb-2">
                   Bilangan Kehadiran
                 </label>
-                <select
-                  value={kehadiran}
-                  onChange={(e) => setKehadiran(Number(e.target.value))}
-                  className="w-full px-4 py-3 rounded-xl border border-[var(--color-gold)]/30 bg-[var(--color-ivory)] font-body text-sm text-[var(--color-brown)] focus:outline-none focus:border-[var(--color-maroon)]"
-                >
+                <div className="flex gap-2">
                   {weddingConfig.rsvp.attendanceOptions.map((n) => (
-                    <option key={n} value={n}>
-                      {n} orang
-                    </option>
+                    <button
+                      key={n}
+                      type="button"
+                      onClick={() => setKehadiran(n)}
+                      className={`w-11 h-11 rounded-full text-sm font-body border transition-colors ${
+                        kehadiran === n
+                          ? "bg-[var(--color-maroon)] text-[var(--color-ivory)] border-[var(--color-maroon)]"
+                          : "border-[var(--color-gold)]/30 text-[var(--color-brown)]"
+                      }`}
+                    >
+                      {n}
+                    </button>
                   ))}
-                </select>
+                </div>
               </div>
             )}
 
@@ -156,7 +159,7 @@ export default function RSVP({ onSubmitted }: { onSubmitted?: () => void }) {
             <button
               type="submit"
               disabled={status === "submitting" || notConfigured}
-              className="active:scale-95 transition-transform w-full py-3.5 rounded-full bg-[var(--color-maroon)] text-[var(--color-ivory)] text-sm tracking-[0.1em] uppercase font-body disabled:opacity-50 min-h-[48px]"
+              className="w-full py-3.5 rounded-full bg-[var(--color-maroon)] text-[var(--color-ivory)] text-sm tracking-[0.1em] uppercase font-body disabled:opacity-50 min-h-[48px]"
             >
               {status === "submitting" ? "Menghantar..." : "Hantar RSVP"}
             </button>

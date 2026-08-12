@@ -34,7 +34,7 @@ export default function Footer() {
 
         <button
           onClick={handleCopy}
-          className="active:scale-95 transition-transform inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-ivory)]/40 text-sm font-body tracking-wide mb-10 min-h-[48px]"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-ivory)]/40 text-sm font-body tracking-wide mb-10 min-h-[48px]"
         >
           {copied ? "Pautan disalin ✓" : "Salin Pautan Jemputan"}
         </button>
